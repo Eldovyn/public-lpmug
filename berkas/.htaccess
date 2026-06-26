@@ -1,0 +1,22 @@
+# Disable PHP execution
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php5.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag engine off
+</IfModule>
+
+# Prevent direct execution of script files
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|phps|phar|shtml|asp|aspx|cgi|pl|jsp)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Prevent directory indexing
+Options -Indexes
