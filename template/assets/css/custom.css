@@ -20,6 +20,7 @@
 
 .main-navbar {
     padding-top: 15px;
+    right: 0 !important;
 }
 
 .nav-link.nav-link-lg {
